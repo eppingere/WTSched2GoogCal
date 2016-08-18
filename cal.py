@@ -56,7 +56,11 @@ def weekDay(year, month, day): #from http://stackoverflow.com/questions/9847213/
 
 
 def make_event(class_input, date):
-    
+    output.write("BEGIN:VEVENT\n")
+    output.write("SUMMARY:" + class_input.name + " with " + class_input.teacher + " in Room " + class_input.room)
+    output.write("UID:" + str(date[0]) + "-" + str(date[1]) + "-" + str(date[2]) + )
+
+
 
 
 output = open(my_name + "_schedule_calender_full_year.ics", "w")
